@@ -1,0 +1,20 @@
+<h2>Goods</h2>
+<div class="container">
+  <a 
+    [routerLink]="['/products/1']" 
+    routerLinkActive="router-link-active"  
+    class="goods_card"
+    *ngFor="let product of products">
+    <div class="goods_card__title">{{ product.title}}</div>
+    <div class="goods_card__subtitle">{{ product.subtitle}}</div>
+    <div class="goods_card__image">
+      <img src="https://picsum.photos/200/300" alt="" srcset="">
+    </div>
+  <div class="goods_card__detail"><p>{{ product.detail}}</p></div>
+ <div class="goods_card__buttons">
+  <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+    <mat-icon>いいね</mat-icon>
+  </button>
+ </div>
+  </a>
+</div>
